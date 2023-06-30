@@ -40,9 +40,9 @@ function modifyModalToEdit(id) {
     let edElem = JSON.parse(localStorage.getItem(id))
     //  Встановлюємо значення полів форми
     document.getElementById("name").value = edElem.name;   
-    document.getElementById("number of channels").value = edElem.channels;   
-    document.getElementById("power, V").value = edElem.power;   
-    document.getElementById("connection (wired/wireless)").value = edElem.connection;
+    document.getElementById("channels").value = edElem.channels;   
+    document.getElementById("power").value = edElem.power;   
+    document.getElementById("connection").value = edElem.connection;
     document.getElementById("color").value = edElem.color;  
     document.getElementById("imgprev").setAttribute("src", `img/${edElem.pictname}`)
     document.getElementById("label-select-img").innerText = "You can choose another image file:"
@@ -116,9 +116,9 @@ function addElementToLocalStorage(){
         // Будуємо новий елемент
         const newElement = {};
         newElement.name =  document.getElementById("name").value;   
-        newElement.channels = document.getElementById("number of channels").value;   
+        newElement.channels = document.getElementById("channels").value;   
         newElement.power = document.getElementById("power").value;  
-        newElement.connection = document.getElementById("connection (wired/wireless)").value;
+        newElement.connection = document.getElementById("connection").value;
         newElement.color = document.getElementById("color").value; 
         newElement.pictname = filename;   
         // Конвертуємо елемент в стрічку
@@ -135,9 +135,9 @@ function editElementInLocalStorage(id) {
     if (validNameAndPower()) {
         let edElem = JSON.parse(localStorage.getItem(id))
         edElem.name =  document.getElementById("name").value;   
-        edElem.channels = document.getElementById("number of channels").value;   
+        edElem.channels = document.getElementById("channels").value;   
         edElem.power = document.getElementById("power").value; 
-        edElem.connection = document.getElementById("connection (wired/wireless)").value; 
+        edElem.connection = document.getElementById("connection").value; 
         edElem.color = document.getElementById("color").value; 
         if (document.getElementById("imgfile").value) {
             let filename = document.getElementById("imgfile").value.replace(/C:\\fakepath\\/, ''); // Обрізаємо C:\fakepath\

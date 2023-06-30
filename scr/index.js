@@ -8,7 +8,7 @@ const modal = $.modal({
             <label for="name">Portable speaker name:</label><br>
             <input type="text" id="name" name="name" class="modal-form-field" placeholder="Input portable speakers name..."/><br><br>
             <label for="channels">Portable speaker number of channels :</label><br>
-            <input type="text" id="name" name="name" class="modal-form-field" placeholder="Input portable speakers number of channels..."/><br><br>
+            <input type="number" id="name" name="name" class="modal-form-field" placeholder="Input portable speakers number of channels..."/><br><br>
             <label for="power">Portable speaker power, V :</label><br>
             <input type="number" id="channels" name="power" min="1" max="1000" class="modal-form-field" placeholder="Input portable speakers power (V) between 1 & 1000"/><br><br>
             <label for="connection">Portable speaker connection (wired/wireless) :</label><br>
@@ -17,7 +17,7 @@ const modal = $.modal({
             <option value="Wireless">Wireless</option>
             </select><br><br>
 
-            <label for="name">Portable speaker color:</label><br>
+            <label for="color">Portable speaker color:</label><br>
             <input type="text" id="name" name="name" class="modal-form-field" placeholder="Input portable speakers color..."/><br><br>
 
             <div id= "img-prev-section">
